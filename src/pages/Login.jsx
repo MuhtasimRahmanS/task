@@ -8,7 +8,7 @@ const Login = () => {
   const [loginError, setLoginError] = useState("");
   const [success, setSuccess] = useState("");
   const [showPass, setShowPass] = useState(false);
-  const { signIn, githubLogin, googleLogin } = useContext(AuthContext);
+  const { signIn, googleLogin } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 
