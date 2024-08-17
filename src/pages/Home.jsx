@@ -1,7 +1,9 @@
+import Products from "./Products";
+
 const Home = () => {
   return (
-    <div>
-      <h1 className="text-6xl">hello</h1>
+    <div className="container mx-auto">
+      <Products />
     </div>
   );
 };

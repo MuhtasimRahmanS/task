@@ -51,7 +51,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <NavLink
-                    to="/about"
+                    to="/all-product"
                     className={({ isActive }) =>
                       isActive
                         ? "text-[#3DB043]  font-semibold text-lg rounded-xl px-2 py-2"
@@ -83,7 +83,7 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink
-                  to="/about"
+                  to="/all-product"
                   className={({ isActive }) =>
                     isActive
                       ? "text-[#3DB043]  font-semibold text-lg rounded-xl px-2 py-2"
@@ -98,24 +98,23 @@ const Navbar = () => {
           <div className="navbar-end space-x-0 md:space-x-2">
             {user ? (
               <div className="flex gap-4">
-                <Link to={"/profile"}>
-                  <div
-                    tabIndex={0}
-                    role="button"
-                    className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom z-20"
-                    data-tip={user.displayName}
-                  >
-                    <div className="w-10 rounded-full">
-                      <img
-                        alt="Tailwind CSS Navbar component"
-                        src={
-                          user.photoURL ||
-                          "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
-                        }
-                      />
-                    </div>
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom z-20"
+                  data-tip={user.displayName}
+                >
+                  <div className="w-10 rounded-full">
+                    <img
+                      alt="Tailwind CSS Navbar component"
+                      src={
+                        user.photoURL ||
+                        "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                      }
+                    />
                   </div>
-                </Link>
+                </div>
+
                 <div>
                   <button
                     onClick={handleSignOut}
